@@ -87,7 +87,7 @@ except Exception as e:
 print(df.dtypes)
 
 # Check for missing values
-print(df.isnull().sum())
+print(df.isnull().sum()) 
 
 """**Clean the dataset by either filling or dropping any missing values.**"""
 
@@ -100,14 +100,14 @@ df['Sales'] = df['Sales'].fillna(df['Sales'].mean())
 df['Quantity'] = df['Quantity'].fillna(df['Quantity'].median())
 
 # Drop rows with missing values in other columns (if any)
-df = df.dropna()
+df = df.dropna() 
 
 # Verify if there are any missing values left
 print(df.isnull().sum())
 
 print(df.columns)
 
-# Check column names
+# Check column names 
 print(df.columns)
 
 # Fill missing values in the 'money' column with the mean
@@ -122,23 +122,23 @@ df = df.dropna()
 # Verify if there are any missing values left
 print(df.isnull().sum())
 
-"""## **Task 2: Basic Data Analysis**
+"""## **Task 2: Basic Data Analysis** 
 
 **2.1 Compute the basic statistics of the numerical columns (e.g., mean, median, standard deviation) using .describe().**
 """
 
 # prompt: Compute the basic statistics of the numerical columns (e.g., mean, median, standard deviation) using .describe().
 
-# Select numerical columns for description
+# Select numerical columns for description 
 numerical_cols = df.select_dtypes(include=['number'])
 
 # Compute and print basic statistics
 print(numerical_cols.describe())
 
 # Compute basic statistics for numerical columns
-numerical_stats = df.describe()
+numerical_stats = df.describe() 
 
-# Print the statistics
+# Print the statistics 
 print(numerical_stats)
 
 """**2.2 Perform groupings on a categorical column (for example, species, region, or department) and compute the mean of a numerical column for each group.**"""
@@ -146,14 +146,14 @@ print(numerical_stats)
 # Group by 'coffee_name' and calculate the mean of 'money' for each group
 grouped_data = df.groupby('coffee_name')['money'].mean()
 
-# Print the grouped data
-print(grouped_data)
+# Print the grouped data 
+print(grouped_data) 
 
 """*Identify any patterns or interesting findings from your analysis.*"""
 
 # prompt: Identify any patterns or interesting findings from your analysis.
 
-# Identify patterns and interesting findings
+# Identify patterns and interesting findings 
 
 # Analyze the grouped data to find patterns in coffee sales
 print(grouped_data.sort_values(ascending=False))
