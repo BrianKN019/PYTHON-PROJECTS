@@ -127,7 +127,7 @@ print(df.isnull().sum())
 **2.1 Compute the basic statistics of the numerical columns (e.g., mean, median, standard deviation) using .describe().**
 """
 
-# prompt: Compute the basic statistics of the numerical columns (e.g., mean, median, standard deviation) using .describe().
+# Compute the basic statistics of the numerical columns (e.g., mean, median, standard deviation) using .describe().
 
 # Select numerical columns for description 
 numerical_cols = df.select_dtypes(include=['number'])
@@ -151,7 +151,7 @@ print(grouped_data)
 
 """*Identify any patterns or interesting findings from your analysis.*"""
 
-# prompt: Identify any patterns or interesting findings from your analysis.
+# Identify any patterns or interesting findings from your analysis.
 
 # Identify patterns and interesting findings 
 
